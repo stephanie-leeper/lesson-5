@@ -1,6 +1,7 @@
-# lesson-5 — My Links
+<<<<<<< HEAD
+# My Links — lesson-5
 
-Personal link-in-bio single-page site.
+One-page, mobile-first link-in-bio built with plain HTML, CSS, and JavaScript.
 
 Quick setup
 
@@ -31,10 +32,5 @@ Open `index.html` in your browser or run a simple static server (Python):
 python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
-# My Links — lesson-5
-
-One-page, mobile-first link-in-bio built with plain HTML, CSS, and JavaScript.
-
-Preview locally: open `index.html` in a browser or run a static server from the `lesson-5` folder.
 
 Deploy: drop the folder into Vercel as a static site.
