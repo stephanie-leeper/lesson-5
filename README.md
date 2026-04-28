@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # My Links — lesson-5
 
 One-page, mobile-first link-in-bio built with plain HTML, CSS, and JavaScript.
