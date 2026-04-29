@@ -1,0 +1,99 @@
+:root{
+  --bg: #f7fbfd;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --accent: #0077cc; /* favorite blue */
+  --accent-2: #185b82; /* darker coastal blue */
+  --shadow: 0 6px 18px rgba(31,41,51,0.08);
+}
+
+.dark{
+  --bg: #0b0f12;
+  --card: #0f1720;
+  --text: #e6eef6;
+  --muted: #9aa6b2;
+  --accent: #66b4ff;
+  --accent-2: #1f6f8b;
+  --shadow: 0 8px 24px rgba(2,6,23,0.6);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Raleway', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background:linear-gradient(180deg, var(--bg), color-mix(in srgb, var(--bg) 90%, #ffffff 10%));
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.card{
+  width:100%;
+  max-width:480px;
+  background:var(--card);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  padding:28px 20px 20px;
+  position:relative;
+  text-align:center;
+}
+
+.theme-toggle{
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:transparent;
+  border:1px #0077cc;
+  padding:6px 8px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+  color:var(--muted);
+}
+.theme-toggle:focus{outline:2px solid color-mix(in srgb, var(--accent) 30%, var(--card) 70%)}
+
+.profile{margin-top:6px;margin-bottom:18px}
+.avatar{
+  width:120px;height:120px;margin:0 auto 12px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent) 0%, var(--accent-2) 60%);
+  box-shadow:0 8px 18px rgba(0,0,0,0.08) inset;
+}
+
+h1{margin:6px 0 6px;font-size:22px;font-weight:700}
+.bio{margin:0;color:var(--muted);font-weight:300}
+
+.links{display:grid;gap:12px;margin-top:18px}
+.link-btn{
+  display:inline-block;padding:14px 18px;border-radius:12px;text-decoration:none;color:var(--card);
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  box-shadow:0 8px 18px rgba(0,0,0,0.08);
+  font-weight:600;
+  transition:transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  width:100%;text-align:center;
+}
+.link-btn:hover{transform:translateY(-4px) scale(1.01);filter:brightness(1.03)}
+.link-btn:active{transform:translateY(-1px)}
+.link-btn:focus{outline:3px solid color-mix(in srgb, var(--card) 70%, var(--accent) 30%)}
+
+.card-footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+/* Larger screens tweak */
+@media(min-width:640px){
+  .card{padding:36px}
+  h1{font-size:26px}
+}
+
+/* small accessible tweaks for reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .link-btn, .theme-toggle{transition:none}
+}
